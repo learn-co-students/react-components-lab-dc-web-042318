@@ -2,7 +2,9 @@ import React from 'react'; // We need to import react so we can make use of its 
 import ReactDOM from 'react-dom'; // ...and we need to import ReactDOM so we can create and test a virtual DOM with react!
 
 const BUTCHER_PRODUCTS = ['Tenderloin', 'Short ribs', 'Beef shin', 'Ribeye'];
-const PRODUCTS_TO_DISPLAY = BUTCHER_PRODUCTS.map(product => <li>{product}</li>);
+const PRODUCTS_TO_DISPLAY = BUTCHER_PRODUCTS.map((product, index) => (
+  <li key={index}>{product}</li>
+));
 
 // Define these exported classes
 export class OlderCoaster extends React.Component {
